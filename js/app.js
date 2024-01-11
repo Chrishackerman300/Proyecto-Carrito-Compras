@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const submenu = document.querySelector('#submenu')
     const cartBtn = document.querySelector('#carrito-btn')
     const carrito = document.querySelector('#carrito')
+    const openFooter = document.querySelector('#btn-info')
+    const footer = document.querySelector('#footer')
 
     cargarEventos()
 
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMenu.addEventListener('click', cerrarMenu)
         submenuBtn.addEventListener('click', abrirSubmenu)
         cartBtn.addEventListener('click', abrirCarrito)
+        openFooter.addEventListener('click', abrirFooter)
     }
 
     //Función abrirMenu
@@ -52,6 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
         else{
             carrito.classList.add('show-carrito')
             console.log('Cerrando el carrito')
+        }
+    }
+
+    //Función abrirFooter
+    function abrirFooter(){
+        if(footer.classList.contains('show-footer')){
+            footer.classList.remove('show-footer')
+            openFooter.classList.remove('btn-active')
+        }
+        else{
+            footer.classList.add('show-footer')
+            openFooter.classList.add('btn-active')
         }
     }
 })
