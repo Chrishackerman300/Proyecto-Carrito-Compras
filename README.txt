@@ -4,3 +4,5 @@ Este es un repositorio donde estare utilizando git y github para publicarlo, he
 ir actualizando los archivos.
 
 Esto estara publicado en el repositorio Carrito-Compras en Github
+
+Credo por ProgramadorJS(Christian Mendoza) 2024
