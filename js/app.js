@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const carrito = document.querySelector('#carrito')
     const openFooter = document.querySelector('#btn-info')
     const footer = document.querySelector('#footer')
+    const btnDarkmode = document.querySelector('#darkmode-btn')
+    const body = document.querySelector('body')
 
     cargarEventos()
 
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submenuBtn.addEventListener('click', abrirSubmenu)
         cartBtn.addEventListener('click', abrirCarrito)
         openFooter.addEventListener('click', abrirFooter)
+        btnDarkmode.addEventListener('click', showDarkmode)
     }
 
     //Función abrirMenu
@@ -67,6 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
         else{
             footer.classList.add('show-footer')
             openFooter.classList.add('btn-active')
+        }
+    }
+
+    //Función showDarkmode
+    function showDarkmode(){
+        if(body.classList.contains('darkmode')){
+            body.classList.remove('darkmode')
+        }
+        else{
+            body.classList.add('darkmode')
         }
     }
 })
